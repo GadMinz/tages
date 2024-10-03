@@ -131,10 +131,19 @@ const isFavorite = (id: string): boolean => {
   }
 }
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -24px;
-  margin-right: -24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 48px;
+  row-gap: 40px;
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
   .filters {

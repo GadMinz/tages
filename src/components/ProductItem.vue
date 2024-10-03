@@ -68,9 +68,7 @@ const { name, code, image, price } = props.item;
 
 <style scoped lang="scss">
 .product-item {
-  padding: 0 24px;
-  margin-bottom: 40px;
-  width: 25%;
+  width: 100%;
   &-wrapper {
     padding: 9px 12px;
     border: 1px solid #eeeeee;
@@ -150,15 +148,6 @@ const { name, code, image, price } = props.item;
         }
       }
     }
-  }
-  @media (max-width: 1366px) {
-    width: 33.33%;
-  }
-  @media (max-width: 1024px) {
-    width: 50%;
-  }
-  @media (max-width: 640px) {
-    width: 100%;
   }
 }
 </style>
